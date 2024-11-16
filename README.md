@@ -11,6 +11,33 @@ The utility includes:
 
 The main export is the `stubTRPC` function, which generates a proxy for stubbing and interacting with tRPC routes.
 
+
+```js
+import { stubTRPC } from './path/to/stubTRPC';
+
+const trpcMock = stubTRPC<MyTRPCRouter>();
+
+// Stub a procedure
+trpcMock.myProcedure.returns({ key: 'value' });
+
+// Intercept and transform a procedure's response
+trpcMock.myProcedure.intercept((value) => ({
+  ...value,
+  extraKey: 'extraValue',
+}));
+
+// Wait for a procedure call
+trpcMock.myProcedure.wait();
+```
+
+## tRPC Cypress is developed by Dosu AI 
+
+### Dosu is an AI compaion for your codebase that handles question & answers, issue triage, documentation generation. Check it out over at [dosu.dev](https://dosu.dev/)!
+
+<a href='https://dosu.dev/' style="background: white; display: inline-block; padding: 10px;">
+  <img src="https://dosu.dev/logomark.svg" alt="Logo" />
+</a>
+
 ## Usage
 
 ### Importing the Utility
@@ -84,30 +111,3 @@ The utility can be extended to include additional Cypress methods or custom logi
 - Ensure your `tRPC` router and procedure types are properly defined for type safety.
 - Default transformers are applied, but custom transformers can be provided via `StubOptions`.
 
-## Example
-
-```js
-import { stubTRPC } from './path/to/stubTRPC';
-
-const trpcMock = stubTRPC<MyTRPCRouter>();
-
-// Stub a procedure
-trpcMock.myProcedure.returns({ key: 'value' });
-
-// Intercept and transform a procedure's response
-trpcMock.myProcedure.intercept((value) => ({
-  ...value,
-  extraKey: 'extraValue',
-}));
-
-// Wait for a procedure call
-trpcMock.myProcedure.wait();
-```
-
-### tRPC Cypress is developed by Dosu AI 
-
-#### Dosu is an AI compaion for your codebase that handles questions & answers, issue deduplication, automatic labeling, and knowledgebase generation check it out over at [dosu.dev](https://dosu.dev/) 
-
-<a href='https://dosu.dev/' style="background: white; display: inline-block; padding: 10px;">
-  <img src="https://dosu.dev/logomark.svg" alt="Logo" />
-</a>
