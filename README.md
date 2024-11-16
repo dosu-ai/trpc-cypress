@@ -1,6 +1,6 @@
 # Cypress tRPC Mock Utility
 
-This file provides utilities for mocking tRPC routes in a Cypress testing environment. It is designed to simplify mocking and testing of tRPC APIs by integrating seamlessly with Cypress.
+This file provides utilities for mocking tRPC routes in a Cypress testing environment. It is designed to simplify mocking and testing of tRPC APIs by integrating seamlessly with Cypress. It is sort of a fork of [cy-trpc](https://github.com/varugasu/cy-trpc) but has support for tRPC v11.
 
 ## Overview
 
@@ -32,7 +32,7 @@ trpcMock.myProcedure.wait();
 
 ## tRPC Cypress is developed by Dosu AI 
 
-### Dosu is an AI compaion for your codebase that handles question & answers, issue triage, documentation generation. Check it out over at [dosu.dev](https://dosu.dev/)!
+### Dosu is an AI compaion for your codebase that handles question & answers, issue triage, documentation generation. Check it out over at [dosu.dev](https://dosu.dev/?ref=cy-trpc)!
 
 <a href='https://dosu.dev/' style="background: white; display: inline-block; padding: 10px;">
   <img src="https://dosu.dev/logomark.svg" alt="Logo" />
