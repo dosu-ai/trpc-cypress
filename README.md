@@ -30,13 +30,6 @@ trpcMock.myProcedure.intercept((value) => ({
 trpcMock.myProcedure.wait();
 ```
 
-## tRPC Cypress is developed by Dosu AI 
-
-### Dosu is an AI compaion for your codebase that handles question & answers, issue triage, documentation generation. Check it out over at [dosu.dev](https://dosu.dev/?ref=cy-trpc)!
-
-<a href='https://dosu.dev/' style="background: white; display: inline-block; padding: 10px;">
-  <img src="https://dosu.dev/logomark.svg" alt="Logo" />
-</a>
 
 ## Usage
 
@@ -111,3 +104,10 @@ The utility can be extended to include additional Cypress methods or custom logi
 - Ensure your `tRPC` router and procedure types are properly defined for type safety.
 - Default transformers are applied, but custom transformers can be provided via `StubOptions`.
 
+### tRPC Cypress is developed by Dosu AI 
+
+#### Dosu is an AI compaion for your codebase that handles question & answers, issue triage, documentation generation. Check it out over at [dosu.dev](https://dosu.dev/?ref=cy-trpc)!
+
+<a href='https://dosu.dev/' style="background: white; display: inline-block; padding: 10px;">
+  <img src="https://dosu.dev/logomark.svg" alt="Logo" />
+</a>
