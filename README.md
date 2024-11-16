@@ -11,12 +11,28 @@ The utility includes:
 
 The main export is the `stubTRPC` function, which generates a proxy for stubbing and interacting with tRPC routes.
 
+Setup:
 
-```js
-import { stubTRPC } from './path/to/stubTRPC';
+Copy [trpc-stub](https://github.com/dosu-ai/trpc-cypress/blob/main/trpc-stub.ts) into your repository
 
-const trpcMock = stubTRPC<MyTRPCRouter>();
+Add it to your Cypress globals
+```ts
+import { stubTRPC } from './trpc-stub';
 
+const trpcStub = stubTRPC<AppRouter>();
+cy.api = trpcStub;
+
+declare global {
+  namespace Cypress {
+		interface Chainable {
+			api: typeof trpcStub;
+		}
+	}
+}
+```
+
+Usage:
+```ts
 // Stub a procedure
 trpcMock.myProcedure.returns({ key: 'value' });
 
@@ -28,28 +44,6 @@ trpcMock.myProcedure.intercept((value) => ({
 
 // Wait for a procedure call
 trpcMock.myProcedure.wait();
-```
-
-
-## Usage
-
-### Importing the Utility
-
-Copy this file into your repository and import the `stubTRPC` function as needed:
-
-```js
-import { stubTRPC } from './path/to/stubTRPC';
-```
-
-### Setting Up Mocks
-
-Initialize the proxy for your tRPC router and define mocks:
-
-```js
-const trpcMock = stubTRPC<MyTRPCRouter>();
-
-trpcMock.someProcedure.returns({ key: 'value' });
-trpcMock.someProcedure.wait();
 ```
 
 ### API
