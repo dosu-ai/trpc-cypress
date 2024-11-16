@@ -9,17 +9,18 @@ import {
 	defaultTransformer,
 	inferProcedureOutput,
 } from '@trpc/server/unstable-core-do-not-import';
+// since this is only used in the test environment, it should be safe to import these
+// it may make upgrading in the future harder, but it's only one location you have to update
 import { PartialDeep } from 'type-fest';
 
 type CypressTRPCMock<$Value extends AnyProcedure> = {
-	// These are commented out but you may find them useful
+	// saving as comments incase they're useful
 	// input: inferProcedureInput<$Value>;
 	// output: inferTransformedProcedureOutput<TRoot, $Value>;
 	// transformer: TRoot['transformer'];
 	// errorShape: TRoot['errorShape'];
-
-  // This is where you add any stubs you need to use, we've put in some default cypress stubs 
 	returns: (value: inferProcedureOutput<$Value>) => Cypress.Chainable<null>;
+	// helpful utility if you don't want to mock the full response, can be deleted if not needed
 	returnsPartial: (value: PartialDeep<inferProcedureOutput<$Value>>) => Cypress.Chainable<null>;
 	intercept: (
 		transformValue?: (value: inferProcedureOutput<$Value>) => any,
