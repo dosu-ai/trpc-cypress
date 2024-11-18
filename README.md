@@ -31,6 +31,31 @@ declare global {
 }
 ```
 
+Disable link batching while in Cypress
+```
+links: [
+	typeof window !== 'undefined' && window.Cypress
+		? httpLink({
+				transformer: SuperJSON,
+				url: getBaseUrl() + '/api/trpc',
+				headers: () => {
+					const headers = new Headers();
+					headers.set('x-trpc-source', 'nextjs-react');
+					return headers;
+				},
+			})
+		: unstable_httpBatchStreamLink({
+				transformer: SuperJSON,
+				url: getBaseUrl() + '/api/trpc',
+				headers: () => {
+					const headers = new Headers();
+					headers.set('x-trpc-source', 'nextjs-react');
+					return headers;
+				},
+			}),
+	],
+```
+
 ### Usage:
 ```ts
 // Stub a procedure
