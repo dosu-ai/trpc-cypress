@@ -1,6 +1,6 @@
 # Cypress tRPC Mock Utility
 
-This file provides utilities for mocking tRPC routes in a Cypress testing environment. It is designed to simplify mocking and testing of tRPC APIs by integrating seamlessly with Cypress. It is sort of a fork of [cy-trpc](https://github.com/varugasu/cy-trpc) but has support for tRPC v11.
+This file provides utilities for mocking tRPC routes in a Cypress testing environment. It is designed to simplify mocking and testing of tRPC APIs by integrating seamlessly with Cypress. It is a fork of [cy-trpc](https://github.com/varugasu/cy-trpc) but has support for tRPC v11, returning parial objects, and waiting for procedures to execute.
 
 ## Overview
 
