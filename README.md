@@ -123,7 +123,7 @@ The utility can be extended to include additional Cypress methods or custom logi
 - Ensure your `tRPC` router and procedure types are properly defined for type safety.
 - Default transformers are applied, but custom transformers can be provided via `StubOptions`.
 
-### tRPC Cypress is developed by Dosu AI 
+### tRPC Cypress is maintained by Dosu AI 
 
 #### Dosu is an AI compaion for your codebase that handles question & answers, issue triage, documentation generation. Check it out over at [dosu.dev](https://dosu.dev/?ref=trpc-cypress)!
 
