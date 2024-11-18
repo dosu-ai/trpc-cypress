@@ -11,7 +11,7 @@ The utility includes:
 
 The main export is the `stubTRPC` function, which generates a proxy for stubbing and interacting with tRPC routes.
 
-Setup:
+### Setup:
 
 Copy [trpc-stub](https://github.com/dosu-ai/trpc-cypress/blob/main/trpc-stub.ts) into your repository
 
@@ -31,7 +31,7 @@ declare global {
 }
 ```
 
-Usage:
+### Usage:
 ```ts
 // Stub a procedure
 trpcMock.myProcedure.returns({ key: 'value' });
