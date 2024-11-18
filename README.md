@@ -32,7 +32,7 @@ declare global {
 ```
 
 Disable link batching while in Cypress
-```
+```ts
 links: [
 	typeof window !== 'undefined' && window.Cypress
 		? httpLink({
