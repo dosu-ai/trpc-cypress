@@ -125,7 +125,7 @@ The utility can be extended to include additional Cypress methods or custom logi
 
 ### tRPC Cypress is developed by Dosu AI 
 
-#### Dosu is an AI compaion for your codebase that handles question & answers, issue triage, documentation generation. Check it out over at [dosu.dev](https://dosu.dev/?ref=cy-trpc)!
+#### Dosu is an AI compaion for your codebase that handles question & answers, issue triage, documentation generation. Check it out over at [dosu.dev](https://dosu.dev/?ref=trpc-cypress)!
 
 <a href='https://dosu.dev/?ref=trpc-cypress' style="background: white; display: inline-block; padding: 10px;">
   <img src="https://dosu.dev/maintaining-should-be-easier.jpg" alt="Maintaing should Be easier than writing code" />
