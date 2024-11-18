@@ -122,6 +122,7 @@ The utility can be extended to include additional Cypress methods or custom logi
 - The utility relies on Cypress's `cy.intercept` for mocking and request handling.
 - Ensure your `tRPC` router and procedure types are properly defined for type safety.
 - Default transformers are applied, but custom transformers can be provided via `StubOptions`.
+- This will not have 100% coverage of Cypress or tRPC, you are meant to add functionality as you need it 
 
 ### tRPC Cypress is maintained by Dosu AI 
 
